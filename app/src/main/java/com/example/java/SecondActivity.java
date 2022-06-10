@@ -37,7 +37,7 @@ public class SecondActivity extends AppCompatActivity {
     }
     void backToFinish(){
         Intent returnIntent = new Intent();
-        returnIntent.putExtra("result","Hammaga rahmat!");
+      //  returnIntent.putExtra("result","Hammaga rahmat!");
         setResult(Activity.RESULT_OK, returnIntent);
         finish();
     }
