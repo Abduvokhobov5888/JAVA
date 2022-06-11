@@ -33,30 +33,30 @@ public class MainActivity extends AppCompatActivity {
         initViews();
     }
 
-    ActivityResultLauncher<Intent> detailLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            new ActivityResultCallback<ActivityResult>() {
-                @Override
-                public void onActivityResult(ActivityResult result) {
-                    if (result.getResultCode() == Activity.RESULT_OK){
-                        Intent data = result.getData();
-                        String text = data.getStringExtra("result");
-                        Log.d(TAG, text);
-                        tv_home.setText(text);
-                    }
-                }
-            }
-    );
+//    ActivityResultLauncher<Intent> detailLauncher = registerForActivityResult(
+//            new ActivityResultContracts.StartActivityForResult(),
+//            new ActivityResultCallback<ActivityResult>() {
+//                @Override
+//                public void onActivityResult(ActivityResult result) {
+//                    if (result.getResultCode() == Activity.RESULT_OK){
+//                        Intent data = result.getData();
+//                        String text = data.getStringExtra("result");
+//                        Log.d(TAG, text);
+//                        tv_home.setText(text);
+//                    }
+//                }
+//            }
+//    );
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == Activity.RESULT_OK){
-            String result = data.getStringExtra("result");
-            Log.d(TAG,result);
-            tv_home.setText(result);
-        }
-    }
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (requestCode == Activity.RESULT_OK){
+//            String result = data.getStringExtra("result");
+//            Log.d(TAG,result);
+//            tv_home.setText(result);
+//        }
+//    }
 
     void initViews(){
         tv_home = findViewById(R.id.tv_home);
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     void openSecond(Users user){
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra("user", user);
-        detailLauncher.launch(intent);
-        //startActivity(intent);
+        //detailLauncher.launch(intent);
+        startActivity(intent);
     }
 }

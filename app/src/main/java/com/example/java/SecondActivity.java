@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.java.model.Member;
 import com.example.java.model.Users;
 
 public class SecondActivity extends AppCompatActivity {
@@ -21,6 +22,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         initViews();
+        backToFinish();
     }
     void initViews(){
         TextView text_id = findViewById(R.id.text_id);
@@ -28,6 +30,7 @@ public class SecondActivity extends AppCompatActivity {
         b_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Member member = new Member(11,"Raxmat!")
                 backToFinish();
             }
         });
@@ -35,10 +38,17 @@ public class SecondActivity extends AppCompatActivity {
         Log.d(TAG,user.toString());
         text_id.setText(user.toString());
     }
-    void backToFinish(){
+
+    void backToFinish(Member member){
         Intent returnIntent = new Intent();
-      //  returnIntent.putExtra("result","Hammaga rahmat!");
-        setResult(Activity.RESULT_OK, returnIntent);
+        returnIntent.putExtra("member",member);
         finish();
+    }
+
+    void openMainActivity(Member member){
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("member", member);
+        //detailLauncher.launch(intent);
+        startActivity(intent);
     }
 }
