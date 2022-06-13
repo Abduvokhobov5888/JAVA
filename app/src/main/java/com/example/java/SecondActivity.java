@@ -33,7 +33,7 @@ public class SecondActivity extends AppCompatActivity {
         b_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Member member = new Member(1,"Raxmat!");
+                Member member = new Member(11,"Raxmat!");
                 openMainActivity(member);
                 finish();
             }
