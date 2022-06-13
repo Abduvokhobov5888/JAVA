@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
-       // backFinish();
+        backFinish();
     }
     void initViews(){ // Jonatish 1da 2ga
         Button button_open = findViewById(R.id.button_open);
