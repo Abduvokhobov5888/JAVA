@@ -2,6 +2,7 @@ package com.example.java;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.java.model.Member;
 import com.example.java.model.Users;
 
+import java.lang.reflect.Method;
+
 public class SecondActivity extends AppCompatActivity {
     static final String TAG = SecondActivity.class.toString();
 
@@ -22,33 +25,34 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         initViews();
-        backToFinish();
+        backFinish();
     }
-    void initViews(){
-        TextView text_id = findViewById(R.id.text_id);
+
+    void backFinish(){ // Jonatish 2da 1ga
         Button b_exit = findViewById(R.id.b_exit);
         b_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Member member = new Member(11,"Raxmat!")
-                backToFinish();
+                Member member = new Member(1,"Raxmat!");
+                openMainActivity(member);
+                finish();
             }
         });
-        Users user =(Users) getIntent().getSerializableExtra("user");
-        Log.d(TAG,user.toString());
-        text_id.setText(user.toString());
     }
-
-    void backToFinish(Member member){
-        Intent returnIntent = new Intent();
-        returnIntent.putExtra("member",member);
-        finish();
-    }
-
-    void openMainActivity(Member member){
-        Intent intent = new Intent(this, SecondActivity.class);
+    void openMainActivity(Member member){//1dan 2ni ochish
+        Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("member", member);
-        //detailLauncher.launch(intent);
+
         startActivity(intent);
+    }
+
+
+    void initViews(){//Qabul qilish 1 da 2ga
+        TextView text_id = findViewById(R.id.text_id);
+
+        Users users = (Users) getIntent().getSerializableExtra("users");
+        Log.d(TAG,users.toString());
+
+        text_id.setText(users.toString());
     }
 }
