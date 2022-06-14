@@ -25,34 +25,27 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         initViews();
-        backFinish();
     }
 
-    void backFinish(){ // Jonatish 2da 1ga
+    void initViews(){//Qabul qilish 1 da 2ga
+        TextView text_id = findViewById(R.id.text_id);
         Button b_exit = findViewById(R.id.b_exit);
         b_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Member member = new Member(11,"Raxmat!");
-                openMainActivity(member);
-                finish();
+                backfinish(member);
             }
         });
-    }
-    void openMainActivity(Member member){//1dan 2ni ochish
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra("member", member);
-
-        startActivity(intent);
-    }
-
-
-    void initViews(){//Qabul qilish 1 da 2ga
-        TextView text_id = findViewById(R.id.text_id);
-
         Users users = (Users) getIntent().getSerializableExtra("users");
         Log.d(TAG,users.toString());
-
         text_id.setText(users.toString());
+    }
+
+    void backfinish(Member member){
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("member", member);
+        setResult(Activity.RESULT_OK, intent);
+        finish();
     }
 }
