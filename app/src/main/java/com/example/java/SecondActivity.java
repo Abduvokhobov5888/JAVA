@@ -28,18 +28,20 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     void initViews(){//Qabul qilish 1 da 2ga
-        TextView text_id = findViewById(R.id.text_id);
-        Button b_exit = findViewById(R.id.b_exit);
-        b_exit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Member member = new Member(11,"Raxmat!");
-                backfinish(member);
-            }
-        });
+        //TextView text_id = findViewById(R.id.text_id);
+       // Button b_exit = findViewById(R.id.b_exit);
+       // b_exit.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            //public void onClick(View v)
+//            {
+//                Member member = new Member(11,"Raxmat!");
+//                backfinish(member);
+//            }
+//        });
         Users users = (Users) getIntent().getSerializableExtra("users");
         Log.d(TAG,users.toString());
-        text_id.setText(users.toString());
+        //text_id.setText(users.toString());
     }
 
     void backfinish(Member member){

@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initViews();
+       // initViews();
     }
     TextView tv_home;
 
@@ -52,17 +52,17 @@ public class MainActivity extends AppCompatActivity {
         }
 );
 
-    void initViews(){ // Jonatish 1da 2ga
-        tv_home = findViewById(R.id.tv_home);
-        Button button_open = findViewById(R.id.button_open);
-        button_open.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Users users = new Users(25,"Abbosbek");
-                openSecondActivity(users);
-            }
-        });
-    }
+//    void initViews(){ // Jonatish 1da 2ga
+//        tv_home = findViewById(R.id.tv_home);
+//        Button button_open = findViewById(R.id.button_open);
+//        button_open.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Users users = new Users(25,"Abbosbek");
+//                openSecondActivity(users);
+//            }
+//        });
+//    }
     void openSecondActivity(Users users){//1dan 2ni ochish
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra("users", users);
