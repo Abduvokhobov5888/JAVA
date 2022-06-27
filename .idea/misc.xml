@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Abbosbek/AndroidStudioProjects/Java/app/src/main/res/drawable/button_border.xml" value="0.252" />
+        <entry key="..\:/Users/Abbosbek/AndroidStudioProjects/Java/app/src/main/res/drawable/button_circle.xml" value="0.2" />
+        <entry key="..\:/Users/Abbosbek/AndroidStudioProjects/Java/app/src/main/res/drawable/button_dash.xml" value="0.252" />
+        <entry key="..\:/Users/Abbosbek/AndroidStudioProjects/Java/app/src/main/res/drawable/button_gradient.xml" value="0.252" />
+        <entry key="..\:/Users/Abbosbek/AndroidStudioProjects/Java/app/src/main/res/drawable/button_gradient_rotate.xml" value="0.252" />
+        <entry key="..\:/Users/Abbosbek/AndroidStudioProjects/Java/app/src/main/res/drawable/button_rounded.xml" value="0.33" />
+        <entry key="..\:/Users/Abbosbek/AndroidStudioProjects/Java/app/src/main/res/drawable/edittext_border_color.xml" value="0.252" />
+        <entry key="..\:/Users/Abbosbek/AndroidStudioProjects/Java/app/src/main/res/drawable/edittext_border_style.xml" value="0.1975" />
+        <entry key="..\:/Users/Abbosbek/AndroidStudioProjects/Java/app/src/main/res/drawable/edittext_bottom_border.xml" value="0.25" />
+        <entry key="..\:/Users/Abbosbek/AndroidStudioProjects/Java/app/src/main/res/drawable/edittext_rounded_cornesr_border.xml" value="0.252" />
         <entry key="..\:/Users/Abbosbek/AndroidStudioProjects/Java/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Abbosbek/AndroidStudioProjects/Java/app/src/main/res/layout/activity_second.xml" value="0.25" />
       </map>

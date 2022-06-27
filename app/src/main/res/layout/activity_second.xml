@@ -16,64 +16,6 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:text="Click me"
-                android:background="#833AB4"
-                app:backgroundTint="@null"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:text="Click me"
-                android:background="@drawable/button_gradient"
-                app:backgroundTint="@null"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:text="Click me"
-                android:background="@drawable/button_rounded"
-                app:backgroundTint="@null"/>
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:text="Click me"
-                android:background="@drawable/button_circle"
-                app:backgroundTint="@null"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:text="Click me"
-                android:background="@drawable/button_border"
-                app:backgroundTint="@null"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:textColor="#000000"
-                android:text="Click me"
-                android:background="@drawable/button_dash"
-                app:backgroundTint="@null"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:text="Click me"
-                android:background="@drawable/button_gradient_rotate"
-                app:backgroundTint="@null"/>
-
-
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
