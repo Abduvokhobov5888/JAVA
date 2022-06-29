@@ -12,6 +12,8 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,6 +65,32 @@
             android:text="Confirm"
             android:background="@drawable/button_dash"
             app:backgroundTint="@null"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/foto4"
+            app:shapeAppearance="@style/rounded_corner"
+            app:strokeColor="@android:color/holo_red_dark"
+            app:strokeWidth="5dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_marginTop="5dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/foto4"
+            app:shapeAppearance="@style/cut_corner"
+            app:strokeColor="#FFEB3B"
+            app:strokeWidth="5dp" />
     </LinearLayout>
 
 
