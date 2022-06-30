@@ -41,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
 
         MainAdapter adapter = new MainAdapter(MainActivity.this,numberWord,numberImage);
         gridView.setAdapter(adapter);
-//
-//        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Toast.makeText(getApplicationContext(), "You Clicked" + numberWord[+
-//                        position], Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getApplicationContext(), "You Clicked " + numberWord[+
+                        position], Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
